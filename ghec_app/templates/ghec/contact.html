@@ -1,0 +1,179 @@
+{% extends 'ghec/base.html' %}
+
+{% load static %}  
+
+
+{%block content%}
+
+ <!--Contact One Start-->
+ <section class="contact-one" id="contact">
+    <div class="container">
+        <div class="row">
+            <div class="col-xl-6 col-lg-6">
+                <div class="contact-one__left">
+                    <div class="contact-one__bg"
+                        style="background-image: url('/static/ghec/images/backgrounds/contact-one-bg.jpg');"></div>
+                    <div class="contact-one__shape-1"
+                        style="background-image: url('/static/ghec/images/shapes/contact-one-shape-1.png');"></div>
+                    <div class="section-title text-left">
+                        <div class="section-title__tagline-box">
+                            <span class="section-title__tagline">Contact us</span>
+                            <div class="section-title__border-box"></div>
+                        </div>
+                        <h2 class="section-title__title">Get a Call Back</h2>
+                    </div>
+                    <div class="contact-one__form-box">
+                        <form action="" class="contact-one__form contact-form-validated"
+                            novalidate="novalidate">
+                            <div class="row">
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="contact-one__form-input-box">
+                                        <input type="text" placeholder="Full Name" name="name">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="contact-one__form-input-box">
+                                        <input type="email" placeholder="Email Address" name="email">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="contact-one__form-input-box">
+                                        <input type="text" placeholder="Phone" name="phone">
+                                    </div>
+                                </div>
+                                <div class="col-xl-6 col-lg-6">
+                                    <div class="contact-one__form-input-box">
+                                        <select class="selectpicker" aria-label="Default select example">
+                                            <option selected>Visa Type</option>
+                                            <option value="1">Tourist Visa</option>
+                                            <option value="2">Business Visa</option>
+                                            <option value="3">Student Visa</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col-xl-12">
+                                    <div class="contact-one__form-input-box text-message-box">
+                                        <textarea name="message" placeholder="Write a Message"></textarea>
+                                    </div>
+                                    <div class="contact-one__formbtn-box">
+                                        <button type="submit" class="thm-btn contact-one__form-btn">Send a
+                                            Message</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <div class="result"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xl-6 col-lg-6">
+                <div class="contact-one__right">
+                    <div class="contact-one__google-map-box">
+                        <iframe
+                            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4562.753041141002!2d-118.80123790098536!3d34.152323469614075!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x80e82469c2162619%3A0xba03efb7998eef6d!2sCostco+Wholesale!5e0!3m2!1sbn!2sbd!4v1562518641290!5m2!1sbn!2sbd"
+                            class="google-map__one" allowfullscreen></iframe>
+                    </div>
+                    <div class="contact-one__address-box">
+                        <div class="contact-one__address-top">
+                            <div class="contact-one__address-top-title">
+                                <h3>GHEC Offices</h3>
+                            </div>
+                            <div class="contact-one__address-top-icon">
+                                <span class="icon-buildings"></span>
+                            </div>
+                        </div>
+                        <div class="contact-one__address-faq">
+                            <div class="accrodion-grp" data-grp-name="faq-one-accrodion">
+                                <div class="accrodion active">
+                                    <div class="accrodion-title">
+                                        <h4>Abuja Office</h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <ul class="contact-one__address-list list-unstyled">
+                                                <li>
+                                                    <div class="icon">
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>Suit A9 Melita plaza Gimbiya street <br> Area 11</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="icon">
+                                                        <i class="fas fa-envelope"></i>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p><a
+                                                                href="mailto:needhelp@company.com">needhelp@company.com</a>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="icon">
+                                                        <i class="fas fa-phone"></i>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p><a href="tel:9288009850">+92 (8800) - 9850</a></p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div><!-- /.inner -->
+                                    </div>
+                                </div>
+                                
+                                <div class="accrodion last-child">
+                                    <div class="accrodion-title">
+                                        <h4>Canada Office</h4>
+                                    </div>
+                                    <div class="accrodion-content">
+                                        <div class="inner">
+                                            <ul class="contact-one__address-list list-unstyled">
+                                                <li>
+                                                    <div class="icon">
+                                                        <i class="fas fa-map-marker-alt"></i>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p>30 Commercial Road <br> Fratton, Australia</p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="icon">
+                                                        <i class="fas fa-envelope"></i>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p><a
+                                                                href="mailto:needhelp@company.com">needhelp@company.com</a>
+                                                        </p>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div class="icon">
+                                                        <i class="fas fa-phone"></i>
+                                                    </div>
+                                                    <div class="text">
+                                                        <p><a href="tel:9288009850">+92 (8800) - 9850</a></p>
+                                                    </div>
+                                                </li>
+                                            </ul>
+                                        </div><!-- /.inner -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--Contact One End-->
+
+
+
+
+
+
+{%endblock%}

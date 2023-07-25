@@ -1,0 +1,255 @@
+{% extends 'ghec/base.html' %}
+
+{% load static %}  
+
+
+{%block content%}
+{% if user.is_authenticated %}
+
+
+<section class="location-one">
+    <div class="container">
+        <div class="location-one__top">
+            <div class="row">
+                <div class="col-xl-7 col-lg-6">
+                    <div class="location-one__top-left">
+                        <div class="section-title text-left">
+                            <div class="section-title__tagline-box">
+                                <span class="section-title__tagline">checkout our locations</span>
+                                <div class="section-title__border-box"></div>
+                            </div>
+                            <h2 class="section-title__title">LISTENING (General)</h2>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        <div class="location-one__bottom">
+            <div class="location-one__main-tab-box tabs-box">
+                <ul class="tab-buttons clearfix list-unstyled">
+                    <li data-tab="#south-america" class="tab-btn active-btn"><span>Part 1</span></li>
+                    <li data-tab="#canada" class="tab-btn"><span>Part 2</span></li>
+                    <li data-tab="#australia" class="tab-btn"><span>Part 3</span></li>
+                    <li data-tab="#dubai" class="tab-btn"><span>Part 4</span></li>
+                    <li data-tab="#doc" class="tab-btn"><span>Document</span></li>
+                </ul>
+                <div class="tabs-content">
+                    <!--tab-->
+                    <div class="tab active-tab" id="south-america">
+                        <div class="location-one__tab-content-box">
+                            <div class="location-one__tab-content-box-inner">
+                                <div class="location-one__bg"
+                                
+                                    style="background-image: url('/static/ghec/images/backgrounds/location-one-bg.png');">
+                                </div>
+                                <div class="location-one__tab-content-left">
+                                    <div class="location-one__tab-content-img">
+                                            <iframe width="450" height="295" src="https://www.youtube.com/embed/0Z6DYpOGT6I"> </iframe>
+                                       
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="location-one__tab-content-right">
+                                    <ul class="list-unstyled location-one__tab-content-time">
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Monday</p>
+                                            <h4 class="location-one__tab-content-time-box">12:00 pm - 19:00 pm
+                                            </h4>
+                                        </li>
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Tuesday to Friday</p>
+                                            <h4 class="location-one__tab-content-time-box">8:00 am - 19:00 pm
+                                            </h4>
+                                        </li>
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Saturday</p>
+                                            <h4 class="location-one__tab-content-time-box">8:00 am to 3:30 pm
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--tab-->
+                    <div class="tab " id="canada">
+                        <div class="location-one__tab-content-box">
+                            <div class="location-one__tab-content-box-inner">
+                                <div class="location-one__bg"
+                                    style="background-image: url('/static/ghec/images/backgrounds/location-one-bg.png');">
+                                </div>
+                                <div class="location-one__tab-content-left">
+                                    <div class="location-one__tab-content-img">
+                                        <iframe width="450" height="295" src="https://www.youtube.com/embed/Y60S-k54C0w"> </iframe>
+                                   
+                                    
+                                </div>
+                                    
+                                </div>
+                                <div class="location-one__tab-content-right">
+                                    <ul class="list-unstyled location-one__tab-content-time">
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Monday</p>
+                                            <h4 class="location-one__tab-content-time-box">12:00 pm - 19:00 pm
+                                            </h4>
+                                        </li>
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Tuesday to Friday</p>
+                                            <h4 class="location-one__tab-content-time-box">8:00 am - 19:00 pm
+                                            </h4>
+                                        </li>
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Saturday</p>
+                                            <h4 class="location-one__tab-content-time-box">8:00 am to 3:30 pm
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--tab-->
+                    <div class="tab " id="australia">
+                        <div class="location-one__tab-content-box">
+                            <div class="location-one__tab-content-box-inner">
+                                <div class="location-one__bg"
+                                    style="background-image: url('/static/ghec/images/backgrounds/location-one-bg.png');">
+                                </div>
+                                <div class="location-one__tab-content-left">
+                                    <div class="location-one__tab-content-img">
+                                            <iframe width="450" height="295" src="https://www.youtube.com/embed/9asDmqxXb0U"> </iframe>
+                                       
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="location-one__tab-content-right">
+                                    <ul class="list-unstyled location-one__tab-content-time">
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Monday</p>
+                                            <h4 class="location-one__tab-content-time-box">12:00 pm - 19:00 pm
+                                            </h4>
+                                        </li>
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Tuesday to Friday</p>
+                                            <h4 class="location-one__tab-content-time-box">8:00 am - 19:00 pm
+                                            </h4>
+                                        </li>
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Saturday</p>
+                                            <h4 class="location-one__tab-content-time-box">8:00 am to 3:30 pm
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--tab-->
+                    <div class="tab " id="dubai">
+                        <div class="location-one__tab-content-box">
+                            <div class="location-one__tab-content-box-inner">
+                                <div class="location-one__bg"
+                                    style="background-image: url('/static/ghec/images/backgrounds/location-one-bg.png');">
+                                </div>
+                                <div class="location-one__tab-content-left">
+                                    <div class="location-one__tab-content-img">
+                                            <iframe width="450" height="295" src="https://www.youtube.com/embed/seDN42Q7C8E"> </iframe>
+                                       
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="location-one__tab-content-right">
+                                    <ul class="list-unstyled location-one__tab-content-time">
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Monday</p>
+                                            <h4 class="location-one__tab-content-time-box">12:00 pm - 19:00 pm
+                                            </h4>
+                                        </li>
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Tuesday to Friday</p>
+                                            <h4 class="location-one__tab-content-time-box">8:00 am - 19:00 pm
+                                            </h4>
+                                        </li>
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Saturday</p>
+                                            <h4 class="location-one__tab-content-time-box">8:00 am to 3:30 pm
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <!--tab-->
+                    <div class="tab " id="doc">
+                        <div class="location-one__tab-content-box">
+                            <div class="location-one__tab-content-box-inner">
+                                <div class="location-one__bg"
+                                    style="background-image: url(assets/images/backgrounds/location-one-bg.png);">
+                                </div>
+                                <div class="location-one__tab-content-left">
+                                    <div class="location-one__tab-content-img">
+                                        <a href="{{ document_url }}" target="_blank" class="btn btn-outline-secondary btn-lg" role="button">Download Listening Document</a>
+                                       
+                                        
+                                    </div>
+                                    
+                                </div>
+                                <div class="location-one__tab-content-right">
+                                    <ul class="list-unstyled location-one__tab-content-time">
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Monday</p>
+                                            <h4 class="location-one__tab-content-time-box">12:00 pm - 19:00 pm
+                                            </h4>
+                                        </li>
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Tuesday to Friday</p>
+                                            <h4 class="location-one__tab-content-time-box">8:00 am - 19:00 pm
+                                            </h4>
+                                        </li>
+                                        <li>
+                                            <p class="location-one__tab-content-day-name">Saturday</p>
+                                            <h4 class="location-one__tab-content-time-box">8:00 am to 3:30 pm
+                                            </h4>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!--tab-->
+                    
+                </div>
+                
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<!--Location One End-->
+
+{% else %}
+<link rel="stylesheet" href="{% static 'ghec/css/customcss.css' %}" />
+
+<div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+   
+  <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+<div class="formbg1">
+  <div class="formbg-inner padding-horizontal--48">
+    <h1><center><a href="{% url 'login' %}">You need to login  <br/> to view this page</a></center></h1>
+   
+  </div></div>
+
+  </div></div>
+{% endif %}
+
+
+{%endblock%}

@@ -1,0 +1,78 @@
+{% extends 'ghec/base.html' %}
+
+{% load static %}  
+
+
+{%block content%}
+
+{% if user.is_admin or user.is_superuser %}
+
+<!--tab-->
+ <!--Start Cart Page-->
+ <section class="cart-page">
+    <div class="container">
+        <div class="table-responsive">
+            <table class="table cart-table">
+                <thead>
+                    <tr>
+                        <th>NAME</th>
+                        <th>PHONE</th>
+                        <th>ADDRESS</th>
+                        {% if user.is_superuser %}
+                        <th>UPDATE</th>
+                        <th>DELETE</th>
+                        {% endif %}
+                    </tr>
+                </thead>
+                <tbody>
+
+                    {% for client in clients %}
+
+                    <tr>
+                        <td><h3><a href="#">{{ client.first_name }} &nbsp {{ client.last_name }}</a></h3></td>
+                        <td>{{ client.phone }}</td>
+                        <td>{{ client.address }}</td>
+
+                        {% if user.is_superuser %}
+                        <td>
+                            <div class="cross-icon">
+                                <a href="{% url 'updateclient' client.user_id %}"> <i class="fas fa-edit"></i></a>
+                            </div>
+                        </td>
+                        <td>
+                          <a href="{% url 'deleteclient' client.user_id %}" type="button" class="btn btn-danger btn-lg">Yes Delete</a>
+                            
+                        </td>
+                        {% endif %}
+                    </tr>
+                    {% endfor %}
+                </tbody>
+            </table>
+        </div>
+
+    </div>
+</section>
+<!--End Cart Page-->
+
+
+
+{% else %}
+<link rel="stylesheet" href="{% static 'ghec/css/customcss.css' %}" />
+
+<div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+   
+  <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+<div class="formbg1">
+  <div class="formbg-inner padding-horizontal--48">
+    <h1><center><a href="{% url 'clienthome' %}">Admin Access!!!</a></center></h1>
+   
+  </div></div>
+
+  </div></div>
+{% endif %}
+
+
+
+
+
+{%endblock%}

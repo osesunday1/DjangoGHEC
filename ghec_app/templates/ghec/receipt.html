@@ -1,0 +1,76 @@
+{% extends 'ghec/base.html' %}
+
+{% load static %}  
+
+
+{%block content%}
+
+
+{% if user.is_superuser %}
+
+
+<link rel="stylesheet" href="{% static 'ghec/css/customcss.css' %}" />
+
+<div class="contact-three__bg" style="background-image: url('/static/ghec/images/backgrounds/contact-three-bg.png');"></div>
+
+<div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+   
+  <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+   
+
+      <div class="formbg1">
+        <div class="formbg-inner padding-horizontal--48">
+          <center><span class="padding-bottom--15">Please insert your email</span></center>
+          <form  method="POST">
+            {% csrf_token %}
+            <div class="field padding-bottom--24">
+                {{ form.client_name}}
+              </div>
+              <div class="field padding-bottom--24">
+                {{ form.amount_paid }}
+              </div>
+              <div class="field padding-bottom--24">
+                {{ form.sender_name }}
+              </div>
+              <div class="field padding-bottom--24">
+                {{ form.date_paid }}
+              </div>
+              <div class="field padding-bottom--24">
+                {{ form.bank_name }}
+              </div>
+
+            <div class="field padding-bottom--24">
+              {{ form.reason }}
+            </div>
+            
+            <div class="field padding-bottom--24">
+              <input type="submit" name="submit" value="Send">
+            </div>
+          </form>
+        </div>
+    </div>
+
+  </div>
+</div>
+
+
+
+{% else %}
+<link rel="stylesheet" href="{% static 'ghec/css/customcss.css' %}" />
+
+<div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+   
+  <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+<div class="formbg1">
+  <div class="formbg-inner padding-horizontal--48">
+    <h1><center><a href="{% url 'login' %}">CEO Access!!!</a></center></h1>
+   
+  </div></div>
+
+  </div></div>
+{% endif %}
+
+
+
+
+{%endblock%}

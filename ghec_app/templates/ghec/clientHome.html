@@ -1,0 +1,270 @@
+{% extends 'ghec/base.html' %}
+
+{% load static %}  
+
+
+{%block content%}
+
+{% if user.is_authenticated %}
+
+<div class="contact-three__bg" style="background-image: url('/static/ghec/images/backgrounds/contact-three-bg.png');"></div> <br>
+<div class="contact-three__bg" style="background-image: url('/static/ghec/images/backgrounds/contact-three-bg.png');"></div>
+<div class="client-body-home">
+
+        
+        
+        <div class="row my-5 justify-content-center g-0">
+            <div class="col-xl-4 col-lg-4">
+              <div class="pricing-page__single h-100">
+
+                <div class="pricing-page__single-inner">
+
+                <div class="pricing-page__shape-1">
+                    <img src=" {% static 'ghec/images/shapes/pricing-page-shape-1.png' %}" alt="">
+                </div>
+                <div class="pricing-page__price-box">
+                    <h3 class="pricing-page__price">Personal Details</h3>
+                </div>
+            
+                <div class="pricing-page__icon">
+                    <span class="fa-solid fa-address-card fa-5x"></span>
+                    
+                </div>
+
+                <div class="pricing-page__content">
+                    <h4 class="pricing-page__title">{{ user.client.first_name }} &nbsp; {{ user.client.last_name }} </h4>
+                    <ul class="list-unstyled pricing-page__service-list">
+                        <li>
+                            <div class="icon">
+                                <i class="fa-solid fa-phone"></i>
+                            </div>
+                            <div class="text">
+                                <p>{{ user.client.phone }}</p>
+                            </div>
+                        </li>
+                        <li>
+                            <div class="icon">
+                                <i class="fa-solid fa-address-book"></i>
+                            </div>
+                            <div class="text">
+                                <p>{{ user.client.address }}</p>
+                            </div>
+                        </li>
+                    </ul>
+                    <div class="pricing-page__btn-box">
+                        <a href="#" class="thm-btn open-buttons">UPDATE</a>
+                    </div>
+                </div>
+              </div>
+            </div>
+            </div>
+
+            <br>
+
+
+            
+            <div class="col-xl-4 col-lg-4">
+
+                <div class="pricing-page__single h-100">
+                    <div class="pricing-page__single-inner">
+
+                        <div class="pricing-page__price-box">
+                            <h3 class="pricing-page__price">Suscribed Package</h3>
+                        </div>
+
+                        <div class="pricing-page__shape-1">
+                            <img src="{% static 'ghec/images/shapes/pricing-page-shape-1.png' %}" alt="">
+                        </div>
+                    
+                        <div class="pricing-page__icon">
+                            <span class="fa-solid fa-file-invoice-dollar fa-4x"></span>
+                            
+                        </div>
+
+
+
+                
+
+                        {% for application in applications %}
+                        
+
+                        <div class="pricing-page__content">
+                            <h4 class="pricing-page__title"> <strong>Country:</strong> {{ application.country }} </h4>
+                            <ul class="list-unstyled pricing-page__service-list">
+                                <li>
+                                    <div class="text">
+                                        <p><strong>Package:</strong> {{ application.package }}</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="text">
+                                        <p><strong>Application Fee:</strong> {{ application.processing_fee }}</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="text">
+                                        <p><strong>Amount Paid:</strong> {{ application.amount_paid }}</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <div class="text">
+                                        <p><strong>Debt:</strong> {{ application.debt }}</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+
+                        {% endfor %}
+
+
+            </div>
+          </div>
+            </div>
+        </div>
+
+
+
+          
+
+
+
+
+
+
+
+
+
+        <!--------------------------------------second row----------------------------------->
+
+        <div class="row my-5 justify-content-center g-0">
+            
+
+            <br>
+
+
+            
+            <div class="col-xl-4 col-lg-4">
+
+                <div class="pricing-page__single h-100">
+                    <div class="pricing-page__single-inner">
+
+                        <div class="pricing-page__price-box">
+                            <h3 class="pricing-page__price">Receipt</h3>
+                        </div>
+
+                        <div class="pricing-page__shape-1">
+                            <img src="{% static 'ghec/images/shapes/pricing-page-shape-1.png' %}" alt="">
+                        </div>
+                    
+                        <div class="pricing-page__icon">
+                            <span class="fa-sharp fa-solid fa-file-pdf fa-4x"></span>
+                        </div>
+                        
+
+
+                        <table class="table table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col"><center>Date Paid</center></th>
+                                <th scope="col"><center>Amout Paid</center></th>
+                            
+                              </tr>
+                            </thead>
+                            
+                            <tbody>
+                                {% for receipt in receipts %}
+                              <tr>
+                                <th scope="row"><center>{{ receipt.date_paid }}</center></th>
+                                <td><center>{{ receipt.amount_paid }}</center></td>
+                              </tr>
+                            </a>
+                              {% endfor %}
+                            </tbody>
+                          </table>
+
+            </div>
+          </div>
+            </div>
+        </div>
+
+
+        <!---------------------------------------end of second row------------------------------------------>
+
+
+</div>
+
+
+
+
+<dialog class="modals" id="modals">
+    <center><h3>UPDATE INFO</h3></center><br>
+    
+    
+      <form method="POST" class="contact-five__form contact-form-validated" novalidate="novalidate">
+          {% csrf_token %}    
+
+          <div class="row">
+              <div class="col-xl-6">
+                  <div class="contact-five__input-box">
+                      {{ form.first_name}} 
+                  </div>
+              </div>
+              <div class="col-xl-6">
+                  <div class="contact-five__input-box">
+                      {{ form.last_name}} 
+                  </div>
+              </div>
+              <div class="col-xl-6">
+                  <div class="contact-five__input-box">
+                      {{ form.phone}} 
+                  </div>
+              </div>
+              <div class="col-xl-6">
+                  <div class="contact-five__input-box">
+                      {{ form.address}} 
+                  </div>
+              </div>
+          </div>
+          
+          
+
+
+          <br>
+
+          <div class="contact-five__btn-box">
+          <input type="submit" value="Update" class="btn btn-secondary btn-lg">
+          <input  value="Cancel" class="btn btn-secondary close-buttons btn-lg">
+          </div>
+  
+    </form>
+  
+  </dialog>
+ 
+</div>
+<!--tab-->
+
+
+{% else %}
+<link rel="stylesheet" href="{% static 'ghec/css/customcss.css' %}" />
+
+<div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+   
+  <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+<div class="formbg1">
+  <div class="formbg-inner padding-horizontal--48">
+    <h1><center><a href="{% url 'login' %}">You need to login  <br/> to view this page</a></center></h1>
+   
+  </div></div>
+
+  </div></div>
+{% endif %}
+
+
+
+{% if user.is_admin %}
+    <script>
+        window.location.href = "{% url 'clientlist' %}";
+    </script>
+{% endif %}
+
+{%endblock%}

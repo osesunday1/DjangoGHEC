@@ -1,0 +1,421 @@
+{% extends 'ghec/base.html' %}
+
+{% load static %}  
+
+
+{%block content%}
+
+
+
+<!-- Main Sllider Start -->
+<section class="main-slider" id="home">
+    <div class="main-slider__carousel owl-carousel owl-theme thm-owl__carousel"
+        data-owl-options='{"loop": true, "items": 1, "navText": ["<span class=\"icon-left-arrow\"></span>","<span class=\"icon-right-arrow\"></span>"], "margin": 0, "dots": true, "nav": true, "animateOut": "slideOutDown", "animateIn": "fadeIn", "active": true, "smartSpeed": 1000, "autoplay": true, "autoplayTimeout": 7000, "autoplayHoverPause": false}'>
+
+        <div class="item main-slider__slide-1">
+            <div class="main-slider__bg" style="background-image: url('/static/ghec/images/backgrounds/slider-1-1.jpg');">
+            </div><!-- /.slider-one__bg -->
+            <div class="container">
+                <div class="main-slider__content">
+                    <h2 class="main-slider__title">Immigration & <br> Visa Consulting <br> Here...</h2>
+                    <div class="main-slider__btn-box">
+                        <a href="{% url 'aboutUs' %}" class="main-slider__btn thm-btn">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item main-slider__slide-2">
+            <div class="main-slider__bg" style="background-image: url('/static/ghec/images/backgrounds/slider-1-2.jpg');">
+            </div><!-- /.slider-one__bg -->
+            <div class="container">
+                <div class="main-slider__content">
+                    <h2 class="main-slider__title">Immigration & <br> Visa Consulting <br> Here...</h2>
+                    <div class="main-slider__btn-box">
+                        <a href="{% url 'aboutUs' %}" class="main-slider__btn thm-btn">Discover More</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="item main-slider__slide-3">
+            <div class="main-slider__bg" style="background-image: url('/static/ghec/images/backgrounds/slider-1-3.jpg');">
+            </div><!-- /.slider-one__bg -->
+            <div class="container">
+                <div class="main-slider__content">
+                    <h2 class="main-slider__title">Immigration & <br> Visa Consulting <br> Here...</h2>
+                    <div class="main-slider__btn-box">
+                        <divclass="main-slider__btn thm-btn">Discover More</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+<!--Main Sllider Start -->
+
+
+
+<!--feature One Start-->
+<section class="feature-one">
+    <div class="container">
+        <div class="row">
+            <!--feature One Single Start-->
+            <div class="col-xl-4 col-lg-4">
+                <div class="feature-one__single">
+                    <div class="feature-one__inner">
+                        <div class="feature-one__shape-1">
+                            <img src="{% static 'ghec/images/shapes/feature-one-shape-1.png' %}" alt="">
+                        </div>
+                        <div class="feature-one__img-one">
+                            <img src="{% static 'ghec/images/resources/feature-1-1.png' %}" alt="">
+                        </div>
+                        <p class="feature-one__sub-title">Online form</p>
+                        <h3 class="feature-one__title">Apply Online for <br> New Visa</h3>
+                        <div class="feature-one__btn-box">
+                            <div class="feature-one__btn">Learn More</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--feature One Single End-->
+            <!--feature One Single Start-->
+            <div class="col-xl-4 col-lg-4">
+                <div class="feature-one__single">
+                    <div class="feature-one__inner">
+                        <div class="feature-one__shape-1">
+                            <img src="{% static 'ghec/images/shapes/feature-one-shape-1.png' %}" alt="">
+                        </div>
+                        <div class="feature-one__img-one feature-one__img-two">
+                            <img src="{% static 'ghec/images/resources/feature-1-2.png' %}" alt="">
+                        </div>
+                        <p class="feature-one__sub-title">Positive result</p>
+                        <h3 class="feature-one__title">Best Immigration <br>Process</h3>
+                        <div class="feature-one__btn-box">
+                            <div class="feature-one__btn">Learn More</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--feature One Single End-->
+            <!--feature One Single Start-->
+            <div class="col-xl-4 col-lg-4">
+                <div class="feature-one__single">
+                    <div class="feature-one__inner">
+                        <div class="feature-one__shape-1">
+                            <img src="{% static 'ghec/images/shapes/feature-one-shape-1.png' %}" alt="">
+                        </div>
+                        <div class="feature-one__img-one feature-one__img-three">
+                            <img src="{% static 'ghec/images/resources/feature-1-3.png' %}" alt="">
+                        </div>
+                        <p class="feature-one__sub-title">download form</p>
+                        <h3 class="feature-one__title">Documents Required <br> for Visa</h3>
+                        <div class="feature-one__btn-box">
+                            <div class="feature-one__btn">Learn More</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--feature One Single End-->
+        </div>
+        <div class="row">
+            <div class="col-xl-12">
+                <div class="feature-one__bottom">
+                    <p class="feature-one__text">Providing a One-Stop Solution for all Your <a
+                            href="{%url 'packageCanada' %}">Visa</a>
+                        & <a href="{%url 'packageCanada' %}">Immigration</a> Needs</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!--feature One End-->
+
+
+     
+
+
+        <!--Coaching One Start-->
+        <center>
+        <section class="coaching-one">
+            <div class="coaching-one__top">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-xl-7 col-lg-6">
+                            <div class="coaching-one__left">
+                                <div class="section-title text-left">
+                                    <div class="section-title__tagline-box">
+                                        <span class="section-title__tagline">Coaching we offer</span>
+                                        <div class="section-title__border-box"></div>
+                                    </div>
+                                    <h2 class="section-title__title">Get the Best Trainings you
+                                        Deserve</h2>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-xl-5 col-lg-6">
+                            <div class="coaching-one__right">
+                                <p class="coaching-one__text">There are many variations of passages of available but the
+                                    majority have suffered alteration in some form, by injected hum randomised words
+                                    which
+                                    don't slightly.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            
+            <div class="coaching-one__bottom">
+                <div class="container">
+                    
+                    <div class="row m-auto p-auto">
+                        
+                        <!--Coaching One Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="100ms">
+                            <div class="coaching-one__single">
+                                <div class="coaching-one__img-box">
+                                    <div class="coaching-one__img">
+                                        <img src="{% static 'ghec/images/coaching/coaching-1-1.jpg' %}" alt="">
+                                    </div>
+                                    <div class="coaching-one__content">
+                                        <div class="coaching-one__shape-1">
+                                            <img src="{% static 'ghec/images/shapes/coaching-one-shape-1.png' %}" alt="">
+                                        </div>
+                                        <h3 class="coaching-one__title">IELTS Test</h3>
+                                        <div class="coaching-one__arrow-box">
+                                            <a href="coaching-details.html" class="coaching-one__arrow"><i
+                                                    class="icon-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="coaching-one__hover-content">
+                                        <div class="coaching-one__hover-shape-1"></div>
+                                        <div class="coaching-one__hover-icon">
+                                            <img src="{% static 'ghec/images/icon/coaching-one-hover-icon.png' %}" alt="">
+                                        </div>
+                                        <h3 class="coaching-one__hover-title">IELTS Test</h3>
+                                        <p class="coaching-one__hover-text"> We give Ielts past test questions to help you prepare for the test if needed</p>
+                                        <div class="coaching-one__hover-arrow-box">
+                                            <a href="#" class="coaching-one__hover-arrow"><i
+                                                    class="icon-down"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Coaching One Single End-->
+                        <!--Coaching One Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="200ms">
+                            <div class="coaching-one__single">
+                                <div class="coaching-one__img-box">
+                                    <div class="coaching-one__img">
+                                        <img src="{% static 'ghec/images/coaching/coaching-1-2.jpg' %}" alt="">
+                                    </div>
+                                    <div class="coaching-one__content">
+                                        <div class="coaching-one__shape-1">
+                                            <img src="{% static 'ghec/images/shapes/coaching-one-shape-1.png' %}" alt="">
+                                        </div>
+                                        <h3 class="coaching-one__title">IELTS Coaching</h3>
+                                        <div class="coaching-one__arrow-box">
+                                            <a href="coaching-details.html" class="coaching-one__arrow"><i
+                                                    class="icon-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="coaching-one__hover-content">
+                                        <div class="coaching-one__hover-shape-1"></div>
+                                        <div class="coaching-one__hover-icon">
+                                            <img src="{% static 'ghec/images/icon/coaching-one-hover-icon.png' %}" alt="">
+                                        </div>
+                                        <h3 class="coaching-one__hover-title">IELTS Coaching</h3>
+                                        <p class="coaching-one__hover-text">We provide IELTS classes to prepare our clients for IELTS exam</p>
+                                        <div class="coaching-one__hover-arrow-box">
+                                            <a href="#" class="coaching-one__hover-arrow"><i
+                                                    class="icon-down"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Coaching One Single End-->
+                        
+                        <!--Coaching One Single Start-->
+                        <div class="col-xl-4 col-lg-6 col-md-6 wow fadeInUp" data-wow-delay="400ms">
+                            <div class="coaching-one__single">
+                                <div class="coaching-one__img-box">
+                                    <div class="coaching-one__img">
+                                        <img src="{% static 'ghec/images/coaching/coaching-1-4.jpg' %}" alt="">
+                                    </div>
+                                    <div class="coaching-one__content">
+                                        <div class="coaching-one__shape-1">
+                                            <img src="{% static 'ghec/images/shapes/coaching-one-shape-1.png' %}" alt="">
+                                        </div>
+                                        <h3 class="coaching-one__title">Orientation</h3>
+                                        <div class="coaching-one__arrow-box">
+                                            <a href="#" class="coaching-one__arrow"><i
+                                                    class="icon-up-right"></i></a>
+                                        </div>
+                                    </div>
+                                    <div class="coaching-one__hover-content">
+                                        <div class="coaching-one__hover-shape-1"></div>
+                                        <div class="coaching-one__hover-icon">
+                                            <img src="{% static 'ghec/images/icon/coaching-one-hover-icon.png' %}" alt="">
+                                        </div>
+                                        <h3 class="coaching-one__hover-title">Orientation</h3>
+                                        <p class="coaching-one__hover-text">We give indepth orientation on the various packages available</p>
+                                        <div class="coaching-one__hover-arrow-box">
+                                            <a href="#" class="coaching-one__hover-arrow"><i
+                                                    class="icon-down"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Coaching One Single End-->
+                    </div>
+                </div>
+            </div>
+        </section>
+    
+        <!--Coaching One End-->
+
+
+             
+        <!--Countries One Start-->
+        <section class="countries-one" id="countries">
+            <div class="countries-one__bg"
+                style="background-image: url('/static/ghec/images/backgrounds/countries-one-bg.png');"></div>
+            <div class="container">
+                <div class="section-title text-center">
+                    <div class="section-title__tagline-box">
+                        <span class="section-title__tagline">Our countries list</span>
+                        <div class="section-title__border-box"></div>
+                    </div>
+                    <h2 class="section-title__title">Select the Country of
+                        <br> Your Choice</h2>
+                </div>
+                <div class="row">
+                    <!--Countries One Single Start-->
+                    <div class="col-xl-2 col-lg-4 col-md-6">
+                        <div class="countries-one__single">
+                            <div class="countries-one__img-box">
+                                <div class="countries-one__img">
+                                    <img src="{% static 'ghec/images/countries/countries-brazil.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <h3 class="countries-one__title"><a href="#">Brazil</a></h3>
+                            <p class="countries-one__text">Nulla ut elemen
+                                tum sapien</p>
+                            <div class="countries-one__arrow-box">
+                                <a href="#" class="countries-one__arrow"><i
+                                        class="icon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Countries One Single End-->
+                    <!--Countries One Single Start-->
+                    <div class="col-xl-2 col-lg-4 col-md-6">
+                        <div class="countries-one__single">
+                            <div class="countries-one__img-box">
+                                <div class="countries-one__img">
+                                    <img src="{% static 'ghec/images/countries/countries-1-2.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <h3 class="countries-one__title"><a href="#">London</a></h3>
+                            <p class="countries-one__text">Nulla ut elemen
+                                tum sapien</p>
+                            <div class="countries-one__arrow-box">
+                                <a href="#" class="countries-one__arrow"><i
+                                        class="icon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Countries One Single End-->
+                    
+                    <!--Countries One Single Start-->
+                    <div class="col-xl-2 col-lg-4 col-md-6">
+                        <div class="countries-one__single">
+                            <div class="countries-one__img-box">
+                                <div class="countries-one__img">
+                                    <img src="{% static 'ghec/images/countries/countries-1-4.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <h3 class="countries-one__title"><a href="#">Australia</a></h3>
+                            <p class="countries-one__text">Nulla ut elemen
+                                tum sapien</p>
+                            <div class="countries-one__arrow-box">
+                                <a href="#" class="countries-one__arrow"><i
+                                        class="icon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Countries One Single End-->
+                    <!--Countries One Single Start-->
+                    <div class="col-xl-2 col-lg-4 col-md-6">
+                        <div class="countries-one__single">
+                            <div class="countries-one__img-box">
+                                <div class="countries-one__img">
+                                    <img src="{% static 'ghec/images/countries/countries-1-5.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <h3 class="countries-one__title"><a href="{% url 'packageCanada' %}">Canada</a></h3>
+                            <p class="countries-one__text">Nulla ut elemen
+                                tum sapien</p>
+                            <div class="countries-one__arrow-box">
+                                <a href="{% url 'packageCanada' %}" class="countries-one__arrow"><i
+                                        class="icon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Countries One Single End-->
+                    <!--Countries One Single Start-->
+                    <div class="col-xl-2 col-lg-4 col-md-6">
+                        <div class="countries-one__single">
+                            <div class="countries-one__img-box">
+                                <div class="countries-one__img">
+                                    <img src="{% static 'ghec/images/countries/countries-1-6.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <h3 class="countries-one__title"><a href="#">Turkey</a></h3>
+                            <p class="countries-one__text">Nulla ut elemen
+                                tum sapien</p>
+                            <div class="countries-one__arrow-box">
+                                <a href="#" class="countries-one__arrow"><i
+                                        class="icon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Countries One Single End-->
+                    <!--Countries One Single Start-->
+                    <div class="col-xl-2 col-lg-4 col-md-6">
+                        <div class="countries-one__single">
+                            <div class="countries-one__img-box">
+                                <div class="countries-one__img">
+                                    <img src="{% static 'ghec/images/countries/countries-1-7.jpg' %}" alt="">
+                                </div>
+                            </div>
+                            <h3 class="countries-one__title"><a href="#">Barbados</a></h3>
+                            <p class="countries-one__text">Nulla ut elemen
+                                tum sapien</p>
+                            <div class="countries-one__arrow-box">
+                                <a href="#" class="countries-one__arrow"><i
+                                        class="icon-right-arrow"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Countries One Single End-->
+                </div>
+            </div>
+        </section>
+        <!--Countries One End-->
+
+
+
+
+        
+       
+
+
+
+
+{%endblock%}

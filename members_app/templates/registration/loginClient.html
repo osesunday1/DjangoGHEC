@@ -1,0 +1,53 @@
+{% extends 'ghec/base.html' %}
+
+{% load static %}  
+
+
+{%block content%}
+
+
+
+<div class="contact-three__bg" style="background-image: url('/static/ghec/images/backgrounds/contact-three-bg.png');"></div>
+  <div class="container">
+<anime-body>
+<div class="anime-box">
+    <span class="anime-borderLine"></span>
+      <form method="POST" action="{% url 'login' %}">
+        <h2>Sign in</h2>
+        {% csrf_token %}
+        
+        <div class="inputBox">
+            <input type="email" id="email" name="email" required="required">
+            <span>Usernames</span>
+            <i></i>
+        </div>
+
+        <div class="inputBox">
+            <input type="password" id="password" name="password" required="required">
+            <span> Password</span>
+            <i></i>
+        </div>
+        <div class="links">
+          <a href="{% url 'password_reset' %}"> Forgot Password</a>
+          <a href="{% url 'signupClient' %}"> Signup</a>
+      </div>
+        <br/>
+
+        {% if messages %}
+
+        {% for message in messages %}
+            {{message}}
+        {% endfor %}
+
+    {% endif %}
+    <br/>
+ 
+          <input type="submit" value="Login">
+          
+            
+
+  </form>
+  </div>
+</anime-body>
+  </div>
+{%endblock%}

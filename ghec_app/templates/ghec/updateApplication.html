@@ -1,0 +1,58 @@
+{% extends 'ghec/base.html' %}
+
+{% load static %}  
+
+
+{%block content%}
+
+
+{% if user.is_superuser %}
+
+<!--Contact Three Start-->
+<section class="contact-three">
+  <div class="contact-three__bg"
+      style="background-image: url('/static/ghec/images/backgrounds/contact-three-bg.png');"></div>
+  <div class="container">
+      <center>
+          
+        <div class="card">
+            <h5 class="card-header">{{ application.client_name }}</h5>
+            <div class="card-body">
+              <p class="card-text">
+                <form action="" method=POST>
+                  
+                    {% csrf_token %}
+                    {{ form.as_p }}
+                    <br>
+                    <input type="submit" value="Update"
+                    class="btn btn-secondary">
+                </form>
+            </p>
+          
+            </div>
+          </div>
+          
+
+        </center>
+      
+  </div>
+</section>
+<!--Contact Three End-->
+
+{% else %}
+<link rel="stylesheet" href="{% static 'ghec/css/customcss.css' %}" />
+
+<div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+   
+  <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+<div class="formbg1">
+  <div class="formbg-inner padding-horizontal--48">
+    <h1><center><a href="#">CEO Access!!!</a></center></h1>
+   
+  </div></div>
+
+  </div></div>
+{% endif %}
+
+
+{%endblock%}

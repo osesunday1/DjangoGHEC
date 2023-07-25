@@ -1,0 +1,143 @@
+{% extends 'ghec/base.html' %}
+
+{% load static %}  
+
+
+{%block content%}
+
+<section>
+    <!---------------------------------------------------country accordion------------------------------------------------->
+
+
+    <section class="gallery-page">
+       
+            
+    <div class="country-accordion_tab">
+        
+        <div class="country-accordion_tab_wrapper">
+            
+
+                <input type="radio" id="one" name="accordion_group" class="radio" checked>
+                <input type="radio" id="two" name="accordion_group" class="radio">
+                <input type="radio" id="three" name="accordion_group" class="radio">
+                <input type="radio" id="four" name="accordion_group" class="radio">
+
+                <div class="country-accordion_tab_group col-12 col-sm-12 col-md-4 col-lg-6 col-xl-3">
+                    <label for="one" class="country-tab " id="country-one-tab">School</label>
+                    <label for="two" class="country-tab" id="country-two-tab">Express Entry</label>
+                    <label for="three" class="country-tab" id="country-three-tab">Tourism</label>
+                    <label for="four" class="country-tab" id="country-four-tab">Business</label>
+
+                    <div class="countries-details__documents">
+                      <div class="icon">
+                          <span class="fas fa-sign-in-alt"></span>
+                      </div>
+                      <div class="content">
+                        {% if user.is_authenticated %} <h3><a href="{% url 'application' %}">Proceed with Package</a></h3>{% else %}
+                        <h3><a href="{% url 'login' %}">Proceed with Package</a></h3>{% endif %}  
+                      </div>
+                  </div>
+                </div>
+            
+
+
+
+
+            <div class="country-accordion_tab_contents col-12 col-sm-12 col-md-7 col-lg-6 col-xl-5">
+
+
+              
+              <div class="main-menu__update-box-right">
+                <div class="main-menu__social-box">
+                  
+                                           
+                                            
+                                            
+                  {% if user.is_authenticated %}<a href="{% url 'application' %}"><h4 class="main-menu__social-title">Proceed</h4></a>&nbsp &nbsp {% else %}
+                  <a href="{% url 'login' %}"><h4 class="main-menu__social-title">Proceed</h4></a>&nbsp &nbsp  {% endif %}  
+                  {% if user.is_authenticated %} <a href="{% url 'application' %}">  <i class="fas fa-sign-in-alt"></i> </a>{% else %}
+                  <a href="{% url 'login' %}">  <i class="fas fa-sign-in-alt"></i> </a>{% endif %} 
+                </div>
+            </div>
+
+
+              <div class="country-accordion_tab_content " id="one-tab-content">
+                <center><h3 class="coaching-details__title-1">SCHOOLING IN CANADA</h3></center>
+                <h3 class="services-one__title">About Schools in Canada </h3>
+                  <p class="country-accordion_tab_description">Canada is renowned for its high-quality post-secondary education system,
+                    offering a wide range of options for students seeking undergraduate and graduate studies. Universities offer a diverse 
+                    range of programs, including bachelor's, master's, and doctoral degrees, while colleges primarily focus on diploma and 
+                    certificate programs. Both universities and colleges in Canada are recognized for their academic excellence and research contributions.
+                    Many Canadian universities and colleges provide co-op and internship programs, integrating practical work experience with academic studies. 
+                    These programs offer students the opportunity to gain real-world skills, apply their knowledge in professional settings, 
+                    d establish valuable connections within their chosen industries.</p> 
+                  <h3 class="services-one__title">Work After Schooling </h3>
+                  <p class="country-accordion_tab_description">The Post-Graduation Work Permit (PGWP) is designed for international students who have completed a 
+                    program of study at a designated Canadian educational institution. The PGWP allows eligible graduates to work in Canada for a period 
+                    ranging from 8 months to 3 years, depending on the length of their program. The work experience gained through the PGWP can be valuable 
+                    for enhancing career prospects and potentially transitioning to permanent residency.</p>
+                    <h3 class="services-one__title">Budget</h3>
+                  <p class="country-accordion_tab_description">Canadian universities have different tuition fee structures for international students.
+                    The fees can vary depending on the province, institution, and program. On average, international undergraduate students can expect 
+                    to pay between <strong> 15,000</strong> to  <strong>40,000 </strong>CAD per year.  </p> <br>
+                    <p class="country-accordion_tab_description"> Processing fee: <strong> N250,000 </strong> </p>
+
+              </div>
+
+
+              <div class="country-accordion_tab_content" id="two-tab-content">
+                <center><h3 class="coaching-details__title-1">CANADA EXPRESS ENTRY</h3></center>
+                <h3 class="services-one__title">Express Entry</h3>
+                  <p class="country-accordion_tab_description">Canada Express Entry is an immigration system introduced by the Canadian government in 
+                    2015 to manage the selection and processing of skilled foreign workers who wish to migrate to Canada permanently. 
+                    It is designed to attract highly skilled individuals who can contribute to the Canadian economy and fill labor market gaps.</p>
+                    <h3 class="services-one__title">Budget</h3>
+                  <p class="country-accordion_tab_description">Budgeting for Canada Express Entry involves considering various factors and expenses
+                    such as Family Size, Proof of Funds, Language Test, Educational Credential Assessment, etc. 
+                    A minimum of <strong> 14,000</strong> CAD upward should be budgeted.  </p> <br>
+                    <p class="country-accordion_tab_description"> Processing fee: <strong> N500,000 </strong> </p>
+              </div>
+
+              <div class="country-accordion_tab_content" id="three-tab-content">
+                <center><h3 class="coaching-details__title-1">TOURISM</h3></center>
+                <h3 class="services-one__title">Tourism Visa</h3>
+                  <p class="country-accordion_tab_description">If you are planning to visit Canada for tourism purposes, 
+                    you may need to apply for a visitor visa, also known as a Temporary Resident Visa (TRV).. <br>
+                    To apply for a visitor visa, you will need to complete the appropriate application form, which can be obtained 
+                    from the official website of Immigration, Refugees and Citizenship Canada (IRCC). The form should be filled out 
+                    accurately and completely.</p><br>
+                    <p class="country-accordion_tab_description"> Processing fee: <strong> N150,000 </strong> </p>
+              </div>
+
+              <div class="country-accordion_tab_content" id="four-tab-content">
+                <h3 class="services-one__title">Business</h3>
+                  <p class="country-accordion_tab_description">Canada offers several options for individuals who want 
+                    to visit the country for business purposes. The specific type of business visa you may need will depend 
+                    on the nature and duration of your intended business activities. Some common options are: Business Visitor, 
+                    Electronic Travel Authorization (eTA), International Mobility Program (IMP) etc.</p>
+              </div>
+              
+
+            </div>
+
+        
+
+        </div>
+   
+
+   
+    </div>
+
+
+               
+    </div>
+
+
+
+
+    <!---------------------------------------------------country accordion------------------------------------------------->
+</section>
+
+
+
+{%endblock%}

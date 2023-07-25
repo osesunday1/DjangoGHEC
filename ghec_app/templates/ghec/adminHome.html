@@ -1,0 +1,209 @@
+{% extends 'ghec/base.html' %}
+
+{% load static %}  
+
+
+{%block content%}
+{% if user.is_admin or user.is_superuser %}
+
+<!--------------------chartjs cdn--------------------------->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.3.0/chart.min.js" integrity="sha512-mlz/Fs1VtBou2TrUkGzX4VoGvybkD9nkeXWJm3rle0DPHssYYx4j+8kIS15T78ttGfmOjH0lLaBXGcShaVkdkg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<!--------------------chartjs cdn--------------------------->
+
+<!---------------------donaaught link--------------------------------->
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;700&display=swap" rel="stylesheet"/>
+      <link rel="stylesheet" href="{% static 'ghec/css/customcss.css' %}" />
+<!-------------------------------------------------------------------->
+
+
+
+
+<br>
+<center class="mt-5"><h1>DASHBOARD</h1></center>
+
+
+        <div class="container ">
+          
+            <div class="row row-cols-2 ">
+              
+              
+                <div class="col col-12 col-md-6 col-lg-6 col-xl-6 mb-5">
+                <div class="card m-4 h-100" >
+                    <div class="card-body">
+
+
+                      <h2 class="chart-heading">Most Suscribed Countries</h2>
+                      <div class="programming-stats">
+                        <div class="chart-container">
+                          <canvas class="my-chart"></canvas>
+                        </div>
+          
+                        <div class="details">
+                          <ul></ul>
+                        </div>
+                      </div>
+          
+                      <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+                      
+                      
+                      
+                      <script>
+          
+                  var data1 = "{{data1}}"
+                  var data2 = "{{data2}}"
+                  var data3 = "{{data3}}"
+                  var data4 = "{{data4}}"
+          
+                  var name1 = "{{name1}}"
+                  var name2 = "{{name2}}"
+                  var name3 = "{{name3}}"
+                  var name4 = "{{name4}}"
+          
+          
+                          const chartData = {
+                      labels: [name1, name2, name3, name4],
+                      data: [data1, data2, data3, data4],
+                    };
+                    
+                    const myChart = document.querySelector(".my-chart");
+                    const ul = document.querySelector(".programming-stats .details ul");
+                    
+                    new Chart(myChart, {
+                      type: "doughnut",
+                      data: {
+                        labels: chartData.labels,
+                        datasets: [
+                          {
+                            label: "# of Clients",
+                            data: chartData.data,
+                          },
+                        ],
+                      },
+                      options: {
+                        borderWidth: 10,
+                        borderRadius: 2,
+                        hoverBorderWidth: 0,
+                        plugins: {
+                          legend: {
+                            display: false,
+                          },
+                        },
+                      },
+                    });
+                    
+                    const populateUl = () => {
+                      chartData.labels.forEach((l, i) => {
+                        let li = document.createElement("li");
+                        li.innerHTML = `${l}: <span class='percentage'>${chartData.data[i]}%</span>`;
+                        ul.appendChild(li);
+                      });
+                    };
+                    
+                    populateUl();
+          
+          
+                      </script>
+                </div>
+                </div>
+
+              </div>
+              
+              
+              <div class="col col-12 col-md-6 col-lg-6 col-xl-6 mb-5">
+
+                <div class="card m-4 h-100" >
+                    <div class="card-body">
+
+                      <h2 class="chart-heading">Tob 5 Debtors</h2><br>
+                      <div class="programming-stats2">
+                      <canvas id="myChart" style="width:100%;max-width:600px"></canvas>
+                    </div>
+
+                      <script>
+              
+              
+                      var amt1 = "{{amt1}}"
+                      var amt2 = "{{amt2}}"
+                      var amt3 = "{{amt3}}"
+                      var amt4 = "{{amt4}}"
+              
+                      var debtor1 = "{{debtor1}}"
+                      var debtor2 = "{{debtor2}}"
+                      var debtor3 = "{{debtor3}}"
+                      var debtor4 = "{{debtor4}}"
+              
+              
+              
+                      var xValues = [debtor1, debtor2, debtor3, debtor4];
+                      var yValues = [amt1, amt2, amt3, amt4];
+                      var barColors = ["red", "green","blue","orange"];
+              
+                      new Chart("myChart", {
+                        type: "bar",
+                        data: {
+                          labels: xValues,
+                          datasets: [{
+                            backgroundColor: barColors,
+                            data: yValues
+                          }]
+                        },
+                        options: {
+                          legend: {display: false},
+                          title: {
+                            display: true,
+                            text: "Most Patronized Countries"
+                          }
+                        }
+                      });
+                      </script>
+                </div>
+                </div>
+                
+                </div>
+              
+              
+                <div class="col">
+
+                    <div class="card m-4" >
+                        <div class="card-body">
+                        <div id="chart3"></div>
+                    </div>
+                    </div>
+
+                </div>
+              
+              
+                <div class="col">
+
+                    <div class="card m-4" >
+                        <div class="card-body">
+                        <div id="chart4"></div>
+                    </div>
+                    </div>
+
+                </div>
+            </div>
+          </div>
+
+          {% else %}
+          <link rel="stylesheet" href="{% static 'ghec/css/customcss.css' %}" />
+          
+          <div class="box-root flex-flex flex-direction--column" style="min-height: 100vh;flex-grow: 1;">
+             
+            <div class="box-root padding-top--24 flex-flex flex-direction--column" style="flex-grow: 1; z-index: 9;">
+          <div class="formbg1">
+            <div class="formbg-inner padding-horizontal--48">
+              <h1><center><a href="{% url 'clienthome' %}">Admin Access!!!</a></center></h1>
+             
+            </div></div>
+          
+            </div></div>
+          {% endif %}
+
+
+
+{%endblock%}

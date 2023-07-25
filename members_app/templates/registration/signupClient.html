@@ -1,0 +1,38 @@
+{% extends 'ghec/base.html' %}
+
+{% load static %}  
+
+
+{%block content%}
+
+<div class="contact-three__bg"
+      style="background-image: url('/static/ghec/images/backgrounds/contact-three-bg.png');"></div>
+  <div class="container">
+<anime-body>
+<div class="anime-box2">
+    <span class="anime-borderLine2"></span>
+    <span class="anime-borderLine3"></span>
+      <form method="POST">
+        <h2>Register</h2>
+        {% csrf_token %}
+        {% if form.errors %}
+
+        {{form.errors.as_text}}
+
+        {% endif %}
+
+
+        {{ form.as_p }}
+        <div class="links">
+          <a href="{% url 'login' %}"> Login</a>
+      </div>
+
+          <input type="submit" value="SignUp">
+
+  </form>
+  </div>
+</anime-body>
+  </div>
+
+
+{%endblock%}
